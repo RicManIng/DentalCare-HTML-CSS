@@ -1,0 +1,435 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Times New Roman', Times, serif;
+    transition: all 0.3s;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+/*----------------------  style header of webpage  ------------------------------*/
+header {
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: lightblue;
+    height: 50px;
+    overflow: visible;
+}
+
+header>div, header>div>ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    height: 100%;
+}
+
+header>div>img {
+    width: 50px;
+    height: 50px;
+}
+
+header>div>ul>li>a{
+    color:black;
+    text-decoration: none;
+    height: 100%;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+}
+
+header>div>ul>li{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+header>div>ul>li>a:hover{
+    background-color: darkblue;
+    color: white;
+}
+
+header>div>h1{
+    padding: 0px 20px;
+    color: darkblue;
+    font-size: 25px;
+}
+
+#nav-contatti{
+    background-color: darkorange;
+}
+
+#nav-contatti:hover{
+    background-color: rgb(109, 60, 0);
+    color: white;
+}
+
+.icon{
+    filter: invert(0) brightness(0); 
+    transition: filter 1s ease;
+    position: relative;
+    top:3px;
+}
+
+#dropdown-link .icon{
+    transition: filter 1s ease, transform 0.3s ease;
+}
+
+header>div>ul>li>a:hover .icon{
+    filter: invert(1) brightness(2); 
+}
+
+#dropdown-link:hover .icon,
+ #dropdown-list-tag:hover #dropdown-link .icon{
+    transform: rotate(180deg);
+}
+
+#dropdown-menu {
+    display: flex;
+    flex-direction: column; 
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    list-style: none;
+    width: 150%;
+    max-height: 0px;
+    overflow: hidden; 
+    transition: max-height 0.3s ease-out; 
+    z-index: 1;
+}
+
+#dropdown-menu li{
+    width: 100%;
+}
+
+#dropdown-menu li a{
+    text-decoration: none;
+    color: black;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    border-bottom: 1px solid grey;
+    background-color: rgb(75, 154, 181);
+}
+
+#dropdown-menu li a:hover{
+    background-color: rgb(0, 0, 80);
+    color: white;
+}
+
+.dropdown-arrow{
+    filter: invert(0) brightness(0); 
+    transition: filter 1s ease;
+}
+
+#dropdown-menu li a:hover .dropdown-arrow{
+    filter: invert(1) brightness(2); 
+}
+
+#dropdown-link:hover + #dropdown-menu, #dropdown-menu:hover{
+    max-height: 500px; 
+}
+
+#dropdown-list-tag:hover #dropdown-link{
+    background-color: darkblue;
+    color: white;
+}
+
+/* ----------------------------  style home section  ----------------------------*/
+
+#prima-visita {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../img/home.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+#prenotazione {
+    max-width: 500px;
+    background-color: rgba(0, 0, 0, 0.79);
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    position: relative;
+    left: -5vw;
+    top: 10vh;
+    align-items: center;
+}
+
+#prenotazione>h2, #prenotazione>p {
+    text-align: center;
+    color: white;
+}
+
+#home-servizi{
+    color: white;
+    padding-bottom: 20px;
+}
+
+#prenotazione>h2{
+    font-size: 40px;
+}
+
+#prenotazione>p {
+    font-size: 20px;
+}
+
+#prenotazione>a{
+    text-decoration: none;
+}
+
+#prenota-ora{
+    padding:20px;
+    background-color: lightblue;
+    width: 30%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+#prenota-ora:hover {
+    background-color: blue;
+    color: white;
+}
+
+#prenota-ora:active {
+    background-color: darkorange;
+    color: white;
+}
+
+/* ---------------------------- style team section  --------------------------- */
+
+#team {
+    display: flex;
+    width: 100vw;
+    height: 500px;
+    background-color: white;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#team img {
+    max-width: 45%;
+    height: auto;
+}
+
+#team div {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+#team div h2, #team div p, #team div a {
+    text-align: center;
+}
+
+#team div h2{
+    font-size: 40px;
+}
+
+#team div a {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: lightblue;
+    text-decoration: none;
+    color: darkblue;
+    max-width: 50%;
+}
+
+#team div a:hover {
+    background-color: darkblue;
+    color: white;
+}
+
+#team div a:active {
+    background-color: darkorange;
+    color: white;
+}
+
+/* ------------------------------- style services section ---------------------------------- */
+
+#servizi {
+    background-color: lightblue;
+    width: 100%;
+}
+#servizi h2 {
+    font-size: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0px auto;
+    text-align: center;
+}
+#servizi-cards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    width: 100%;
+}
+.servizio-card{
+    max-width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    border: 3px solid darkblue;
+    border-radius: 20px;
+    box-shadow: 4px 4px black;
+}
+
+.servizio-card:hover {
+    position: relative;
+    left: 4px;
+    top: 4px;
+    box-shadow: none;
+}
+
+.servizio-card>p{
+    text-align: center;
+    padding: 0px 20px;
+}
+
+.servizio-card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+#img-estrazione-denti{
+    border-radius: 17px 17px 0px 0px;
+}
+
+#servizi-finale {
+    font-size: 20px;
+    text-align: center;
+    margin: 0px auto;
+    padding: 40px 0px;
+}
+
+.servizio-card>a{
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: darkblue;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.servizio-card>a:hover {
+    background-color: rgb(0, 0, 70);
+}
+
+.servizio-card>a:active {
+    background-color: rgb(141, 78, 0);
+}
+
+/* ------------------------------- style discount section ---------------------------------- */
+
+#convenzioni h2{
+    font-size: 40px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+#convenzioni div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#convenzioni div img{
+    max-width: 30%;
+}
+
+#convenzioni div div{
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+    gap: 30px;
+}
+
+#convenzioni div div a, #convenzioni div div h3 {
+    padding: 20px 0px;
+    text-align: center;
+}
+
+#convenzioni div div h3{
+    font-size: 30px;
+}
+
+#convenzioni div div a{
+    padding: 20px;
+    color: darkblue;
+    background-color: lightblue;
+    text-decoration: none;
+    width: 50%;
+    border-radius: 20px;
+}
+
+#convenzioni div div a:hover{
+    background-color: darkblue;
+    color: white;
+}
+
+#convenzioni div div a:active{
+    background-color: darkorange;
+}
+
+/* ------------------------------- style contact section ---------------------------------- */
+
+#contatti{
+    background-color: black;
+}
+
+#contatti h2 {
+    margin-top: 0px auto;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    padding: 30px 0px;
+}
+#contatti-content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    padding-bottom: 20px;
+}
+
+.contatti-col {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contatti-col h3 {
+    font-size: 30px;
+}
+.contatti-col h3, .contatti-col p{
+    color : white;
+}
+
+.contatti-col p a{
+    color: lightblue;
+}

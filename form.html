@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cristal Prenotazioni</title>
+        <link rel="stylesheet" href="css/form.css">
+    </head>
+    <body>
+        <form action="http://www.cristal-healthcare.com/prenotazioni.php" method="get">
+            <fieldset>
+                <legend>Compila il form e prendi posto in studio !</legend>
+                <label for="nome">Nome : </label>
+                <input type="text" name="nome" id="name" placeholder="inserisci il tuo Nome" required maxlength="30">
+                <label for="cognome">Cognome : </label>
+                <input type="text" name="cognome" id="surname" placeholder="inserisci il tuo Cognome" required maxlength="30">
+                <label for="telefono">Cellulare : </label>
+                <div>
+                    <select id="phone-prefix" name="phone-prefix">
+                        <option value="+1">🇺🇸 +1 Stati Uniti</option>
+                        <option value="+44">🇬🇧 +44 Regno Unito</option>
+                        <option value="+39">🇮🇹 +39 Italia</option>
+                        <option value="+33">🇫🇷 +33 Francia</option>
+                        <option value="+49">🇩🇪 +49 Germania</option>
+                        <option value="+34">🇪🇸 +34 Spagna</option>
+                        <option value="+91">🇮🇳 +91 India</option>
+                        <option value="+81">🇯🇵 +81 Giappone</option>
+                        <!-- Aggiungi altri prefissi telefonici qui -->
+                    </select>
+                    <input type="tel" id="telefono" name="telefono" 
+                    minlength="10" maxlength="15" required 
+                    placeholder="Inserisci il numero di telefono">
+                </div>
+                <label for="email">E-mail : </label>
+                <input type="email" placeholder="inserisci la tua e-mail" required>
+                <p>Scegli la tua prestazione : </p>
+                <div id="radio-check">
+                    <div>
+                        <input type="radio" id="igiene" value="igiene" name="prestazione">
+                        <label for="igiene" id="igiene-label">Pulizia Dentale</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="allineamento" value="allineamento" name="prestazione">
+                        <label for="allineamento" id="allineamento-label">Allineamento</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="estrazione" value="estrazione" name="prestazione">
+                        <label for="estrazione" id="estrazione-label">Estrazione</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="altro" value="altro" name="prestazione" checked>
+                        <label for="altro" id="altro-label">Altro</label>
+                    </div>
+                </div>
+                <label for="messaggio">Messaggio : </label>
+                <textarea name="messaggio" id="messaggio" placeholder="Non hai trovato il servizio che fa per te? I nostri collaboratori saranno felici di soddisfare le tue esigienze.
+Se invece vuole prenotare una visita indichi 2/3 fascie orarie per essere ricontattato 
+e fissare l'appuntamento
+                " cols="75" rows="5" required></textarea>
+                <div id="pulsanti">
+                    <input type="submit" value="Prenota" id="prenota">
+                    <input type="reset" value="Annulla" id="annulla">
+                </div>
+            </fieldset>
+        </form>
+    </body>
+</html>
